@@ -44,7 +44,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: aquamarine;
+    background-color: white;
     transition: width 0.5s ease;
 }
 
@@ -82,12 +82,16 @@ h1 {
 
 .sobre {
     padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sobre-titulo {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .sobre-caixa {
@@ -117,14 +121,17 @@ h1 {
 }
 
 .projetos-paragrafo {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
     text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #475569;
 }
 
 .projetos-card:hover {
-    box-shadow: #87E8FF;
-    transform: translateY(-10px) scale(1.3);
+    box-shadow: 0 10px 30px rgba(135, 232, 255, 0.6);
+    transform: translateY(-8px) scale(1.03);
 }
 
 .projetos-caixa {
@@ -139,9 +146,9 @@ h1 {
     background: #fbfdfd;
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1px solid white;
+    border: 1px solid #87E8FF;
     overflow: hidden;
-    transition: all 0.5 ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
@@ -150,9 +157,10 @@ h1 {
 }
 
 .projetos-card h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    color: #0f172a;
 }
 
 .projetos-card p {
@@ -167,8 +175,9 @@ h1 {
 }
 
 .paragrafo-projetos {
-    color: rgba(226, 232, 240, 0.8);
-    line-height: 1.25rem;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.4rem;
 }
 
 .info-projetos {
@@ -185,7 +194,15 @@ h1 {
 .contatos-titulo {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.contato-paragrafo {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #475569; 
 }
 
 .formulario-contato {
@@ -234,4 +251,16 @@ h1 {
 
 .botao-enviar:hover {
     transform: translateY(-4px);
+}
+
+.footer {
+    background-color: rgba(176, 224, 230, 0.8);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
 }
