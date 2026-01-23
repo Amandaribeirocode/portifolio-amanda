@@ -175,4 +175,63 @@ h1 {
     margin-bottom: 5px;
 }
 
+.contatos {
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.contatos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fbfdfd;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid #87E8FF;
+    border-radius: 16px;
+}
+
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: #fbfdfd;
+    border-radius: 8px;
+    color: rgba(128, 128, 128, 1);
+    border: 1px solid #87E8FF;
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: aquamarine;
+    box-shadow: 0 0 5px aquamarine;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.botao-enviar {
+    background-color: rgba(176, 224, 230, 0.8);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-enviar:hover {
+    transform: translateY(-4px);
+}
