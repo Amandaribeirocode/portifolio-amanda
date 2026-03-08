@@ -169,7 +169,7 @@ h1 {
 }
 
 .projetos-imagem {
-    height: 200px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
 }
@@ -271,4 +271,71 @@ h1 {
 .footer p {
     font-size: 0.9rem;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+.menu {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cabecalho {
+    padding: 2rem;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.sub-titulo {
+    font-size: 0.9rem;
+}
+
+.sobre-titulo {
+    font-size: 2rem;
+}
+
+.sobre-caixa {
+    padding: 1.5rem;
+}
+
+.sobre-paragrafo {
+    font-size: 1rem;
+}
+
+.projetos-titulo {
+    font-size: 2rem;
+}
+
+.projetos-caixa {
+    grid-template-columns: 1fr;
+}
+
+.contatos-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.contato-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.texto-item {
+    flex-direction: column;
+    gap: 5px;
+}
+
+.texto-item h4 {
+    min-width: auto;
+}
+
 }
