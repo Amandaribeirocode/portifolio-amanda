@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio - Amanda Ribeiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navegacao">
         <ul class="menu">
@@ -16,40 +18,47 @@
         </ul>
     </nav>
     <main id="inicio" class="cabecalho">
-            <img src="./img/perfil.jpg" alt="Foto de Amanda Ribeiro" class="foto-perfil">
-            <h1>Amanda Ribeiro</h1>
-            <p class="sub-titulo">Desenvolvedora em Formação</p>
+        <img src="./img/perfil.jpg" alt="Foto de Amanda Ribeiro" class="foto-perfil">
+        <h1>Amanda Ribeiro</h1>
+        <p class="sub-titulo">Desenvolvedora em Formação</p>
     </main>
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Olá! Sou uma desenvolvedora em formação estou construindo meus conhecimentos e avançando rumo a minha primeira oportunidade na área.</p>
+            <p class="sobre-paragrafo">Olá! Sou uma desenvolvedora em formação estou construindo meus conhecimentos e
+                avançando rumo a minha primeira oportunidade na área.</p>
         </div>
     </section>
 
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
-        <p class="projetos-paragrafo">Esta seção está preparada para receber meus futuros projetos. Cada desenvolvimento será uma nova oportunidade de mostrar meu crescimento.</p>
+        <p class="projetos-paragrafo">Esta seção está preparada para receber meus futuros projetos. Cada desenvolvimento
+            será uma nova oportunidade de mostrar meu crescimento.</p>
         <div class="projetos-caixa">
             <div class="projetos-card">
                 <img src="./img/projeto1.jpg" alt="Projeto 1º" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Netflix Login</h3>
-                    <p class="paragrafo-projetos">Este projeto foi desenvolvido como parte dos meus estudos em desenvolvimento web. A aplicação recria a interface da página de login da Netflix utilizando HTML e CSS, com foco na prática de estruturação de páginas, estilização, responsividade e organização de layout.</p>
+                    <p class="paragrafo-projetos">Este projeto foi desenvolvido como parte dos meus estudos em
+                        desenvolvimento web. A aplicação recria a interface da página de login da Netflix utilizando
+                        HTML e CSS, com foco na prática de estruturação de páginas, estilização, responsividade e
+                        organização de layout.</p>
                 </div>
             </div>
             <div class="projetos-card">
                 <img src="./img/projetos.jpg" alt="Projeto 2º" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Próximo Projeto</h3>
-                    <p class="paragrafo-projetos">Mais um projeto está sendo planejado. Estou animado para compartilhar</p>
+                    <p class="paragrafo-projetos">Mais um projeto está sendo planejado. Estou animado para compartilhar
+                    </p>
                 </div>
             </div>
-                        <div class="projetos-card">
+            <div class="projetos-card">
                 <img src="./img/projetos.jpg" alt="Projeto 3º" class="projetos-imagem">
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Futuro Projeto</h3>
-                    <p class="paragrafo-projetos">Grandes ideias estão sendo desenvolvidas. Logo você verá o resultado do meu aprendizado aqui!</p>
+                    <p class="paragrafo-projetos">Grandes ideias estão sendo desenvolvidas. Logo você verá o resultado
+                        do meu aprendizado aqui!</p>
                 </div>
             </div>
         </div>
@@ -58,37 +67,38 @@
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Entre em Contato</h2>
         <p class="contato-paragrafo">Estou aberta a aprender, colaborar e trocar experiências. Vamos conectar!</p>
-        <div class="contatos-container">
-            <a href="mailto:karolyneamanda81@gmail.com" class="contato-item">
-            <div class="icone-item">
-                <img src="./img/iconeemail.png" alt="E-mail">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
-            <div class="texto-item"></div>
-            <h4>E-mail</h4>
-            <p class="dado">karolyneamanda81@gmail.com</p>
-            </a>
-            <a href="https://wa.me/5534996638237" target="_blank" class="contato-item">
-            <div class="icone-item">
-                <img src="./img/iconsewhatsapp.png" alt="WhatsApp">
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="5" id="mensagem"></textarea>
             </div>
-            <div class="texto-item">
-            <h4>WhatsApp</h4>
-            <p class="dado">(34) 99663-8237</p>
-            </div>
-            </a>
-            <a href="https://www.linkedin.com/in/amanda-ribeiro-661432165/" target="_blank"class="contato-item">
-            <div class="icone-item">
-                <img src="./img/iconelinkedin.png" alt="icone linkedin">
-            </div>
-            <div class="texto-item">
-            <h4>LinkedIn</h4>
-            <p class="dado">Amanda Ribeiro</p>
-            </div>
-            </a>
-        </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+
     </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5534996638237';
+
+            const texto = `Olá! meu nome é ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            window.open(url, '_blank');
+        }
+
+    </script>
 </body>
 <footer class="footer">
     <p>© 2026 • Amanda Ribeiro — Desenvolvedora em formação</p>
 </footer>
+
 </html>

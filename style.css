@@ -205,59 +205,57 @@ h1 {
     color: #475569; 
 }
 
-.contatos-container {
-    display: flex;
-    gap: 2rem;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 16px;
-    border: 1px solid #87E8FF;
-    background: #fbfdfd;
-}
-
-
-.contato-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
+.formulario-contato {
     max-width: 600px;
-    padding: 1.5rem;
-    margin: 0 auto 20px auto;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #64748b;
+    margin: 0 auto;
+    background: #fbfdfd;
+    padding: 2rem;
+    border: 1px solid #87E8FF;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
     background: #ffffff;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
 }
 
-.contato-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+.grupo-form {
+    margin-bottom: 1.5rem;
 }
 
-.icone-item img {
-    width: 50px;
-    height: auto;
+.campo-form::placeholder {
+    color: #94a3b8;
 }
 
-.texto-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.campo-form:focus {
+    border-color: #38bdf8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
 }
 
-.texto-item h4 {
-    margin: 0;
-    white-space: nowrap;
-    min-width: 110px;
+.botao-form {
+    width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+    color: white;
+    font-size: 1.1rem;
     font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.texto-item .dado {
-    color: #64748b;
+.botao-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 
@@ -273,69 +271,3 @@ h1 {
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-
-.menu {
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.cabecalho {
-    padding: 2rem;
-    text-align: center;
-}
-
-.foto-perfil {
-    width: 180px;
-    height: 180px;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-.sub-titulo {
-    font-size: 0.9rem;
-}
-
-.sobre-titulo {
-    font-size: 2rem;
-}
-
-.sobre-caixa {
-    padding: 1.5rem;
-}
-
-.sobre-paragrafo {
-    font-size: 1rem;
-}
-
-.projetos-titulo {
-    font-size: 2rem;
-}
-
-.projetos-caixa {
-    grid-template-columns: 1fr;
-}
-
-.contatos-container {
-    width: 100%;
-    padding: 1rem;
-}
-
-.contato-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-}
-
-.texto-item {
-    flex-direction: column;
-    gap: 5px;
-}
-
-.texto-item h4 {
-    min-width: auto;
-}
-
-}
